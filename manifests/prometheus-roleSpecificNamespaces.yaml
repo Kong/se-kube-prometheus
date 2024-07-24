@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 items:
 - apiVersion: rbac.authorization.k8s.io/v1
-  kind: Role
+  kind: ClusterRole
   metadata:
     labels:
       app.kubernetes.io/component: prometheus
@@ -10,7 +10,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 2.53.0
     name: prometheus-k8s
-    namespace: default
+    # namespace: default
   rules:
   - apiGroups:
     - ""
@@ -39,7 +39,7 @@ items:
     - list
     - watch
 - apiVersion: rbac.authorization.k8s.io/v1
-  kind: Role
+  kind: ClusterRole
   metadata:
     labels:
       app.kubernetes.io/component: prometheus
@@ -48,7 +48,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 2.53.0
     name: prometheus-k8s
-    namespace: kube-system
+    # namespace: kube-system
   rules:
   - apiGroups:
     - ""
@@ -77,7 +77,7 @@ items:
     - list
     - watch
 - apiVersion: rbac.authorization.k8s.io/v1
-  kind: Role
+  kind: ClusterRole
   metadata:
     labels:
       app.kubernetes.io/component: prometheus
@@ -86,7 +86,7 @@ items:
       app.kubernetes.io/part-of: kube-prometheus
       app.kubernetes.io/version: 2.53.0
     name: prometheus-k8s
-    namespace: monitoring
+    # namespace: monitoring
   rules:
   - apiGroups:
     - ""

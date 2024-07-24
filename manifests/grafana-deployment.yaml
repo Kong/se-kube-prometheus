@@ -67,6 +67,9 @@ spec:
         - mountPath: /tmp
           name: tmp-plugins
           readOnly: false
+        - mountPath: /grafana-dashboard-definitions/0/provisioning-dashboards-gateway
+          name: provisioning-dashboards-gateway
+          readOnly: false
         - mountPath: /grafana-dashboard-definitions/0/alertmanager-overview
           name: grafana-dashboard-alertmanager-overview
           readOnly: false
@@ -168,6 +171,9 @@ spec:
       - emptyDir:
           medium: Memory
         name: tmp-plugins
+      - configMap:
+          name: provisioning-dashboards-gateway
+        name: provisioning-dashboards-gateway
       - configMap:
           name: grafana-dashboard-alertmanager-overview
         name: grafana-dashboard-alertmanager-overview

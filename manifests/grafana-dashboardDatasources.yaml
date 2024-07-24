@@ -21,6 +21,17 @@ stringData:
                 "type": "prometheus",
                 "url": "http://prometheus-k8s.monitoring.svc:9090",
                 "version": 1
+            },
+            {
+              "name": "Loki",
+              "type": "loki",
+              "access": "proxy",
+              "editable": true,
+              "uid": "loki",
+              "url": "http://loki:3100",
+              "jsonData": {
+
+              }
             }
         ]
     }

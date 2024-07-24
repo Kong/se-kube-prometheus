@@ -86,6 +86,7 @@ resources:
 - ./manifests/prometheusOperator-serviceAccount.yaml
 - ./manifests/prometheusOperator-serviceMonitor.yaml
 - ./manifests/loki-all.yaml
+- ./manifests/jaeger-all.yaml
 - ./manifests/setup/0alertmanagerConfigCustomResourceDefinition.yaml
 - ./manifests/setup/0alertmanagerCustomResourceDefinition.yaml
 - ./manifests/setup/0podmonitorCustomResourceDefinition.yaml
